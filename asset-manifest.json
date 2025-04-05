@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/m-divya-29/search-suggestion-system/tree/main/search-suggestion-system-ui/static/css/main.e6c13ad2.css",
+    "main.js": "/m-divya-29/search-suggestion-system/tree/main/search-suggestion-system-ui/static/js/main.d5137ac4.js",
+    "static/js/453.0b23a9e0.chunk.js": "/m-divya-29/search-suggestion-system/tree/main/search-suggestion-system-ui/static/js/453.0b23a9e0.chunk.js",
+    "index.html": "/m-divya-29/search-suggestion-system/tree/main/search-suggestion-system-ui/index.html",
+    "main.e6c13ad2.css.map": "/m-divya-29/search-suggestion-system/tree/main/search-suggestion-system-ui/static/css/main.e6c13ad2.css.map",
+    "main.d5137ac4.js.map": "/m-divya-29/search-suggestion-system/tree/main/search-suggestion-system-ui/static/js/main.d5137ac4.js.map",
+    "453.0b23a9e0.chunk.js.map": "/m-divya-29/search-suggestion-system/tree/main/search-suggestion-system-ui/static/js/453.0b23a9e0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.d5137ac4.js"
+  ]
+}
