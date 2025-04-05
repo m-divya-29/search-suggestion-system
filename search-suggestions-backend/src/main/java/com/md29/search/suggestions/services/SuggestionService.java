@@ -12,10 +12,6 @@ import java.util.stream.Collectors;
 
 @Service
 public class SuggestionService {
-    public List<String> getAllProducts() {
-        return Arrays.stream(getProducts()).collect(Collectors.toList());
-    }
-
     class Node {
         char val;
         Node[] children;
@@ -27,16 +23,19 @@ public class SuggestionService {
             this.isWord = false;
         }
     }
+    private final String[] products;
+    private final Node root;
 
-    Node root = null;
+    SuggestionService() {
+        this.products = getProducts();
+        this.root = insertWords(products);
+    }
+    public List<String> getAllProducts() {
+        return Arrays.stream(products).collect(Collectors.toList());
+    }
+
 
     public List<String> suggestedProducts(String searchWord) {
-
-        String[] products = getProducts();
-        root = new Node('#');
-        List<String> ans = new ArrayList<>();
-
-        insertWords(products);
         return find3WordsStartingWith(searchWord);
     }
 
@@ -45,7 +44,8 @@ public class SuggestionService {
         List<String> li = new ArrayList<>();
         // move t till str
         for (int i = 0; i < str.length(); i++) {
-            if (t.children[str.charAt(i) - 'a'] == null)
+            // invalid char or char doesn't exist
+            if(str.charAt(i) < 'a' || str.charAt(i) > 'z' || t.children[str.charAt(i) - 'a'] == null)
                 return li;
             t = t.children[str.charAt(i) - 'a'];
         }
@@ -66,10 +66,12 @@ public class SuggestionService {
         }
     }
 
-    private void insertWords(String[] words) {
+    private Node insertWords(String[] words) {
+        Node root = new Node('#');
+
         for (String word : words) {
             Node t = root;
-            for (char c : word.toCharArray()) {
+            for (char c : word.toLowerCase().toCharArray()) {
                 if (t.children[c - 'a'] == null) {
                     t.children[c - 'a'] = new Node(c);
                 }
@@ -78,6 +80,7 @@ public class SuggestionService {
 
             t.isWord = true;
         }
+        return root;
     }
 
 

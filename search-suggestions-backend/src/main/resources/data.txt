@@ -38,7 +38,7 @@ Shoes
 Hat
 Sunglasses
 Backpack
-Phone Case
+PhoneCase
 Charger
 Mouse
 Keyboard
@@ -55,12 +55,12 @@ Painting
 Frame
 Luggage
 Umbrella
-Water Bottle
+WaterBottle
 Towel
 Brush
 Shampoo
 Conditioner
-Shoe Polish
+ShoePolish
 Lotion
 Toothbrush
 Toothpaste
@@ -80,7 +80,7 @@ Bracelet
 Keychain
 Thermometer
 Scale
-Tissue Box
+TissueBox
 Lotion
 Tote
 Flashlight
@@ -96,17 +96,17 @@ Mixer
 Blender
 Kettle
 Juicer
-Oven Mitts
-Measuring Cups
+OvenMitts
+MeasuringCups
 Straw
 Pouch
-Chopping Board
+ChoppingBoard
 Cutlery
 Tupperware
 Jacket
 Sweater
 Jeans
-T-shirt
+Tshirt
 Leggings
 Shorts
 Boots
@@ -118,7 +118,7 @@ Router
 Clipboard
 Dryer
 Iron
-Measuring Tape
+MeasuringTape
 Ladder
 Toolbox
 Screwdriver

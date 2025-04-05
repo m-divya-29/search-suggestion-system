@@ -21,7 +21,7 @@ public class SuggestionController {
         return suggestionService.suggestedProducts(searchWord.toLowerCase());
     }
 
-    @GetMapping
+    @GetMapping("/")
     @ResponseStatus(HttpStatus.OK)
     public List<String> getAll() {
         return suggestionService.getAllProducts();
