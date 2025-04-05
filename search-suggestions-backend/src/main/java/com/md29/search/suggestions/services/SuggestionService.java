@@ -6,11 +6,16 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
 public class SuggestionService {
+    public List<String> getAllProducts() {
+        return Arrays.stream(getProducts()).collect(Collectors.toList());
+    }
+
     class Node {
         char val;
         Node[] children;
@@ -32,12 +37,6 @@ public class SuggestionService {
         List<String> ans = new ArrayList<>();
 
         insertWords(products);
-//        for (int i = 0; i < searchWord.length(); i++) {
-//            //List<String> li = new ArrayList<>();
-//            ans = find3WordsStartingWith(searchWord.substring(0, i + 1));
-//            //ans.add(li);
-//        }
-
         return find3WordsStartingWith(searchWord);
     }
 

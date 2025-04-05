@@ -20,4 +20,10 @@ public class SuggestionController {
     public List<String> getSuggestions(@PathVariable String searchWord) {
         return suggestionService.suggestedProducts(searchWord.toLowerCase());
     }
+
+    @GetMapping
+    @ResponseStatus(HttpStatus.OK)
+    public List<String> getAll() {
+        return suggestionService.getAllProducts();
+    }
 }
