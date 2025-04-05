@@ -1,0 +1,9 @@
+apple
+mouse
+banana
+chocolate
+table
+chair
+mousepad
+moneyplant
+monitor
