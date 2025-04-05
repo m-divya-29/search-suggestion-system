@@ -5,12 +5,12 @@ function App() {
   const [suggestions, setSuggestions] = useState([]);
   const [loading, setLoading] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
-
+  const BASE_URL = "https://search-suggestions-backend-mdmpir6dgq-uc.a.run.app";
   useEffect(() => {
     const timeout = setTimeout(() => {
       if (product.trim() !== "") {
         setLoading(true);
-        fetch(`http://localhost:8585/api/suggestion/${product}`)
+        fetch(`${BASE_URL}/api/suggestion/${product}`)
           .then((res) => res.json())
           .then((data) => {
             setSuggestions(data);
